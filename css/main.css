@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* url(../images/bg-pattern-top.svg),
+-50%, */
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: hsl(185, 75%, 39%);
+    background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+    background-position: -40%, 150% -30%;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 767px) {
+    body {
+        background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+        background-position: 135%, -25% -30%;
+    }
+}
+
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background-color: white;
+}
+
+@media (max-width: 767px) {
+    .card {
+        margin: 0 auto
+    }
+}
+
+.card > img:nth-of-type(2) {
+    display: block;
+    margin-top: -48px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.card > img:nth-of-type(2) + p > .name, 
+.card > .stats > div > p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card > img:nth-of-type(2) + p {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.card > p > .name + span {
+    color: hsl(0, 0%, 59%);
+}
+
+.card > img:nth-of-type(2) + p + span {
+    margin-bottom: 15px;
+}
+
+.card > img:nth-of-type(2) + p + span,
+.card > .stats > div > span {
+    display: block;
+    font-size: 12px;
+    color: hsl(0, 0%, 59%);
+    margin-top: 5px;
+}
+
+.card > .stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 5px;
+}
